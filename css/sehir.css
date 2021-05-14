@@ -1,0 +1,56 @@
+.resim{
+    height: 800px;
+}
+
+p{
+    font-family:sans-serif;
+    font-size: 20px;
+}
+
+#harita{
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    
+    margin-left: 4%;
+    float:left;
+}
+
+#gezi{
+    background: sandybrown;
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    
+    margin-left: 5%;
+    margin-right: 5%;
+
+    width: 30%;
+    float:left;
+}
+
+#gezi-alt{
+    padding-bottom: 5.2%;
+}
+
+#ilçe{
+    background:sandybrown;
+
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+
+    width: 20%;
+    float:left;
+
+}
+#ilçe-alt{
+    padding-bottom: 40%;
+}
+
+li{
+    font-family:sans-serif;
+    font-size: 20px;
+}
