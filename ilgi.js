@@ -1,21 +1,21 @@
 const url='https://api.openweathermap.org/data/2.5/'
 const key='3005f58ff93f5ffcd42f60b89d63e134'
 
-const setQuery=(e)=>{
+const BasEnter=(e)=>{
     if(e.keyCode=='13')
-    getResult(searchBar.value)
+    GetirSonuc(searchBar.value)
 }
 
-const getResult=(SehirIsmi)=>{
-    let query=`${url}weather?q=${SehirIsmi}&appid=${key}&units=metric&lang=tr`
-    fetch(query)
-    .then(weather =>{
-        return weather.json()
+const GetirSonuc=(SehirIsmi)=>{
+    let Url=`${url}weather?q=${SehirIsmi}&appid=${key}&units=metric&lang=tr`
+    fetch(Url)
+    .then(api =>{
+        return api.json()
     })
-    .then(displayResult)
+    .then(GosterSonuc)
 }
 
-const displayResult = (result) => {
+const GosterSonuc = (result) => {
     let sehir = document.querySelector('.sehir')
     sehir.innerText =`${result.name}, ${result.sys.country}`
     
@@ -31,4 +31,4 @@ const displayResult = (result) => {
 }
 
 const searchBar=document.getElementById('searchBar')
-searchBar.addEventListener('keypress',setQuery)
+searchBar.addEventListener('keypress',BasEnter)
